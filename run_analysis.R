@@ -128,4 +128,5 @@ grouped_TrainTest_CompleteSet <- group_by(filtered_TrainTest_CompleteSet,
                                           Activity_Name) %>% summarize_all(funs(mean))
 
 ##Output the grouped_TrainTest_CompleteSet as a tidy data
-write.csv(grouped_TrainTest_CompleteSet, file = "grouped_TrainTest_CompleteSet.csv")
+#write.csv(grouped_TrainTest_CompleteSet, file = "grouped_TrainTest_CompleteSet.csv")
+write.table(grouped_TrainTest_CompleteSet, file = "grouped_TrainTest_CompleteSet.txt", row.name=FALSE)
